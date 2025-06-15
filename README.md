@@ -27,7 +27,7 @@ It offers easy-to-use **shortcuts** and displays **news** related to the user's 
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/yourusername/modern-homepage.git
+   git clone https://github.com/HassanYasir/Smart-Home-Page.git
 ```
 2. Navigate to the project folder:
 ```bash
