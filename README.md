@@ -1,0 +1,57 @@
+# Modren HomePage
+
+<span>
+<img src='https://raw.githubusercontent.com/HassanYasir/Modren-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
+
+</span>
+
+
+A minimalist and modern homepage built with **React.js**.  
+It offers easy-to-use **shortcuts** and displays **news** related to the user's interests, using the **NewsAPI.org** service.
+
+## ✨ Features
+
+- Clean and minimalist design
+- Customizable shortcuts to favorite websites
+- Live news feed based on user interests
+- Fully responsive for desktop and laptop
+- Built with React.js for smooth and fast performance
+
+## 🚀 Technologies Used
+
+- React.js
+- NewsAPI.org (for fetching news)
+- CSS (for styling)
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+   git clone https://github.com/yourusername/modern-homepage.git
+```
+2. Navigate to the project folder:
+```bash
+   cd Modren-Home-Page-main
+```
+3. Install dependencies:
+```bash
+   npm install
+```
+4. Start the development server:
+```bash
+   npm run dev
+```
+
+## ⚙️ Configuration
+- To fetch news, you need an API key from NewsAPI.org.
+- Create a **.env.local** file in the root of your project and add:
+
+```bash
+   VITE_API_KEY=YOUR_API_KEY_HERE
+   
+```
+
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
