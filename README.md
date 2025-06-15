@@ -1,7 +1,7 @@
 # Modren HomePage
 
 <span>
-<img src='https://raw.githubusercontent.com/HassanYasir/Modren-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
 
 </span>
 
