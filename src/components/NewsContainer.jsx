@@ -84,7 +84,7 @@ function NewsContainer(prop) {
                 />
                 <div className="content">
                   <h3>{elem.title.slice(0,43)}...</h3>
-                  <p>
+                  <p className="new-des">
                     {elem.description.slice(0,88)}...
                   </p>
                   <div className="btn-cont">

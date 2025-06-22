@@ -1,22 +1,41 @@
-import '../App.css';
-import youtube from "../assets/youtube.png"
-import github from "../assets/github.png"
-import gmail from "../assets/gmail.png"
-import linkedin from "../assets/linkedin.png"
-import Shortcutbox from './Shortcutbox';
+import "../App.css";
+import edit from "../assets/edit.png";
+import remove from "../assets/delete.png";
+import Shortcutbox from "./Shortcutbox";
+import { useState } from "react";
 
-function ShortCutcont (){
-    return (
-        <div id="stortcuts-container">
-            <div id="stortcuts-box-container">
-                <Shortcutbox link="https://www.youtube.com/"  src={youtube} tittle={"Youtube"} />
-                <Shortcutbox link="https://github.com/"  src={github} tittle={"Github"} />
-                <Shortcutbox link="https://mail.google.com/"  src={gmail} tittle={"Gmail"} />
-                <Shortcutbox link="https://www.linkedin.com/"  src={linkedin} tittle={"Linkedin"} />
-            </div>
-        </div>
-    );
+
+function ShortCutcont() {
+  const getDomainUrl = (url) => {
+    const parsedUrl = new URL(url);
+    const domain = parsedUrl.origin.replace("https://","").replace("http://","").replace("www.","");
+    return domain;
+  };
+  const shortcuts = [{link:"https://www.youtube.com/",title:"Youtube"},
+    {link:"https://github.com/",title:"Github"},
+    {link:"https://mail.google.com/",title:"Gmail"},
+    {link:"https://www.linkedin.com/",title:"Linkedin"},
+    {link:"https://chatgpt.com/",title:"Chatgpt"},
+    {link:"https://hassanyasir.github.io/Web-Snake-Game/",title:"SnakeGame"}
+  ];
+  return (
+    <div id="stortcuts-container">
+      <div id="stortcuts-box-container">
+        {shortcuts.map((elem)=>{
+            return(
+                <Shortcutbox key={elem.link}
+                link={elem.link}
+                src={`https://icons.duckduckgo.com/ip3/${getDomainUrl(elem.link)}.ico`}
+                onError={() => setImageErr(true)}
+                icons={{icons: [edit, remove]}}
+                title={elem.title}
+                />
+            );
+        })}
+
+      </div>
+    </div>
+  );
 }
-
 
 export default ShortCutcont;
