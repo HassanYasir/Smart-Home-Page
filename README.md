@@ -4,7 +4,7 @@
 <img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
 
 </span>
-##                                                                                                                                   
+<br />
 <img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view02.png' alt='project-view' width='450'  align='center'/>
 
 
