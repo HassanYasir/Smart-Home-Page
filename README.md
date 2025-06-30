@@ -1,14 +1,12 @@
 # Modren HomePage
 
 <span>
-<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='400'  align='center'/>
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
 
 </span>
 
-<span>
-<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view02.png' alt='project-view' width='400'  align='center'/>
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view02.png' alt='project-view' width='450'  align='center'/>
 
-</span>
 
 
 A minimalist and modern homepage built with **React.js**.  
