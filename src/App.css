@@ -90,9 +90,10 @@
 
 
 }
-.shortcut-box:hover .edit{
+.shortcut-box:hover .edit,.delete{
 
   opacity: 1;
+  cursor: pointer;
 
 }
 .shortcut-box:hover .box-cover{
@@ -177,6 +178,87 @@ font-style: normal;
   width: 18px;
   filter: invert(1) brightness(1);
   margin-inline: 0.7rem;
+}
+
+.screen-dialog{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(26, 26, 26, 0.459); /* Like ::backdrop */
+  backdrop-filter: blur(2px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dialog{
+  background-color:var(--bg-dark-5);
+  position: fixed;
+  border:none;
+  box-shadow: 1.5px 0px 7px #0000004f;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+  border-radius: 0.6rem;
+  padding-inline: 10px;
+  padding-block: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 57vmin;
+  padding-block:1.5rem ;
+  z-index: 5;
+
+
+}
+
+
+.dialog-input-cont{
+  width: 80%;
+  margin-bottom: 0.6rem;
+}
+.dialog-input-cont input{
+  width: 99%;
+  background-color: var(--bg-dark-5);
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  color: #CCC;
+  border-bottom:1.4px solid var(--text-white-dull);
+  font-size: 1.2rem;
+  padding:4px 6px;
+  transition: 0.1s ease;
+
+}
+.dialog-input-cont input:focus ~ .label,
+.dialog-input-cont input:valid ~ .label{
+  transform: translateY(-20px);
+  color:inherit;
+}
+.dialog-input-cont input:focus,
+.dialog-input-cont input:valid{
+  border-bottom:1.4px solid #0084f7e8;
+}
+.dialog-input-cont .label{
+  position:absolute;
+
+  color: #bcbcbc;
+  bottom: 42px;
+  font-size: 1.2rem;
+  padding:4px;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+.dialog-input-cont .l-1{
+  bottom: 186px;
+}
+.dialog-input-cont .l-2{
+  bottom: 110px;
 }
 
 .nav{
@@ -324,10 +406,54 @@ font-style: normal;
 .news-btn:hover{
   padding-inline: 17px;
   border-radius: 18px;
-  background-color: var(--bg-dark-5);
+  background-color: var(--bg-dark-1);
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.753);
   color:var(--text-white-dull);
+
+
+  
+}
+.dialog-btn-C{
+  background-color: var(--bg-dark-3);
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding-inline: 15px;
+  padding-block: 5.5px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  color:var(--text-white-dull);
+  transition: all 0.4s ease-in-out;
+  
+  
+}
+.dialog-btn-C:hover{
+  padding-inline: 16px;
+  background-color:var(--bg-dark-1);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.753);
+}
+
+.dialog-btn-S{
+  background-color:#0084f7e8;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding-inline: 15px;
+  padding-block: 5.5px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.4s ease-in-out;
+  
+  
+}
+.dialog-btn-S:hover{
+  padding-inline: 16px;
+  background-color:#006bc9;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.753);
+  /* color:var(--text-white-dull); */
 
 
   

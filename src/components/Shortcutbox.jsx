@@ -4,27 +4,37 @@ import { useState } from "react";
 
 
 
-function Shortcutbox ({link,src,icons,title}){
+function Shortcutbox ({link,src,icons,title,disabled,setDilog,setSId,id,deleteShortcut}){
     const [image,setImage] = useState(`${link}icon.ico`);
+    const handleEdit = () =>{
+        setSId(id);
+        setDilog("EDIT");
+
+    }
+    const handleDelete = () =>{
+        deleteShortcut(id);
+    }
+
     return (
-        <a href={link} className="shortcut-box " target='_blank'>
-            <div className="box-cover">
+        <div onClick={disabled?()=>{setDilog("CREATE")}:()=>{}} className="shortcut-box ">
+            <a className="box-cover" href={!disabled ? link : undefined} target='_blank' >
                 <img src={image} alt=""
                 onError={() => setImage(src)}/>
-            </div>
+            </a>
             <p className="tittle">{title}</p>
             <div className="edit">
-                <img src={icons.icons[0]} alt="" className="edit" />
-                <img src={icons.icons[1]} alt="" className="delete" />
+                <img src={icons.icons[0]} alt="" className="edit" onClick={handleEdit} />
+                <img src={icons.icons[1]} alt="" className="delete" onClick={handleDelete}/>
             </div>
-        </a>
+        </div>
     );
 }
 
 Shortcutbox.propTypes = {
     link: PropTypes.string,
     src: PropTypes.string,
-    tittle: PropTypes.string
+    tittle: PropTypes.string,
+    disabled: PropTypes.bool
     
   }
 
