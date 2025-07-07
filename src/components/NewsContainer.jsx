@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide,} from "swiper/react";
 import { Pagination } from 'swiper/modules';
 import { useState,useEffect } from "react";
+import { useSelector } from 'react-redux';
 // import PropTypes from 'prop-types';
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -8,14 +9,14 @@ import "../App.css";
 
 function NewsContainer(prop) {
   let defaultImage = "https://img.freepik.com/premium-vector/no-data-found-illustration-sites-banner-design-vector-illustration_620585-1690.jpg?semt=ais_hybrid"
-  const [articles,Setarticles] = useState([])
+  const [articles,Setarticles] = useState([]);
   const [loading,Setloading] = useState(false);
-
+  const pageSize = useSelector((state) => state.pageSize);
 
   useEffect(()=>{
     async function getData(category) {
 
-      let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${prop.apiKey}&pageSize=${prop.pageSize}`
+      let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${prop.apiKey}&pageSize=${pageSize}`
       try{
         
         Setloading(true);
@@ -32,14 +33,16 @@ function NewsContainer(prop) {
       
       
     }
-
+    
     async function handlefetch() {
       const cached = prop.dataCach.find(item => item.category === prop.category);
       if(!cached){
         let data = await getData(prop.category);
+        console.log(data);
         Setarticles(data);
         prop.AdddataCach({category:prop.category,articles:data})
-      }else{
+      }
+      else{
         
         Setarticles(cached.articles);
 
@@ -52,6 +55,10 @@ function NewsContainer(prop) {
 
 
   },[prop.category]);
+
+  useEffect(()=>{
+    prop.SetdataCach([]);
+  },[pageSize])
 
 
 
@@ -106,7 +113,5 @@ function NewsContainer(prop) {
   );
 }
 
-// NewsContainer.protoTypes ={
-//   catogary : PropTypes.string
-// }
+
 export default NewsContainer;

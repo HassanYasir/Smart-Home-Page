@@ -5,7 +5,7 @@ import add from "../assets/add.svg";
 import Shortcutbox from "./Shortcutbox";
 import ShortcutDialog from "./ShortcutDialog";
 import useShortcut from "./customHooks/useShortcut";
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 
@@ -16,6 +16,9 @@ function ShortCutcont() {
     return domain;
   };
 
+  
+  const [shortcutLimit,setLimit] = useState(false);
+
 
   // const [editing,setEditing] = useState(false); 
   const [dilogState,setDilog] = useState(false); 
@@ -23,6 +26,14 @@ function ShortCutcont() {
 
 
   const [shortcuts, addShortcut,updateShortcut,deleteShortcut] = useShortcut(); 
+
+  useEffect(()=>{
+    if(shortcuts.length >= 7){
+      setLimit(true);
+    }else{
+      setLimit(false);
+    }
+  },[shortcuts])
 
 
 
@@ -64,7 +75,7 @@ function ShortCutcont() {
         /> 
 
       </div>
-      {dilogState && <ShortcutDialog addShortcut={addShortcut} updateShortcut={updateShortcut} dilogState={dilogState} Id={sId} setDilog={setDilog}/>}
+      {dilogState && <ShortcutDialog addShortcut={addShortcut} updateShortcut={updateShortcut} dilogState={dilogState} Id={sId} setDilog={setDilog} shortcutLimit={shortcutLimit}/>}
       
       
     </div>

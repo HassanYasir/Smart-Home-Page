@@ -2,7 +2,7 @@
 import "../App.css";
 import { useState,useEffect} from "react";
 
-const ShortcutDialog = ({addShortcut,updateShortcut,dilogState,Id,setDilog }) => {
+const ShortcutDialog = ({addShortcut,updateShortcut,dilogState,Id,setDilog,shortcutLimit }) => {
   const [inpName, setInpName] = useState("");
   const [inpLink, setInpLink] = useState("");
   
@@ -54,6 +54,8 @@ const ShortcutDialog = ({addShortcut,updateShortcut,dilogState,Id,setDilog }) =>
     <>
       <div className="screen-dialog">
       <div className="dialog">
+        {!shortcutLimit?
+        <>
         <h2 className="dialog-heading">Edit shortcut</h2>
         <div className="dialog-input-cont">
           <input
@@ -73,11 +75,13 @@ const ShortcutDialog = ({addShortcut,updateShortcut,dilogState,Id,setDilog }) =>
           />
           <div className="label l-2">Name</div>
         </div>
+        </>:<h2 className="dialog-heading">Sorry you can't add more</h2> }
+
         <div className="btn-cont">
           <button className="dialog-btn-C" onClick={handleCancel}>
             Cancel
           </button>
-          <button className="dialog-btn-S" onClick={saveShortcut}>
+          <button className="dialog-btn-S" onClick={!shortcutLimit?saveShortcut:()=>{setDilog(false)}} >
             Save
           </button>
         </div>
