@@ -1,6 +1,4 @@
 import "../App.css";
-import edit from "../assets/edit.png";
-import remove from "../assets/delete.png";
 import add from "../assets/add.svg";
 import Shortcutbox from "./Shortcutbox";
 import ShortcutDialog from "./ShortcutDialog";
@@ -15,6 +13,7 @@ function ShortCutcont() {
     const domain = parsedUrl.origin.replace("https://","").replace("http://","").replace("www.","");
     return domain;
   };
+
 
   
   const [shortcutLimit,setLimit] = useState(false);
@@ -45,7 +44,6 @@ function ShortCutcont() {
               <Shortcutbox key={elem.link}
               link={elem.link}
               src={`https://icons.duckduckgo.com/ip3/${getDomainUrl(elem.link)}.ico`}
-              icons={{icons: [edit, remove]}}
               title={elem.title}
               setDilog={setDilog}
               setSId={setSId}
@@ -57,7 +55,6 @@ function ShortCutcont() {
           <Shortcutbox
           link={""}
           src={"https://www.iconarchive.com/download/i103430/paomedia/small-n-flat/house.1024.png"}
-          icons={{icons: ["", ""]}}
           title={"Empty"}
           disabled={true}
           setDilog={setDilog}
@@ -68,7 +65,6 @@ function ShortCutcont() {
           
           link={""}
           src={add}
-          icons={{icons: ["", ""]}}
           title={"Add shortcut"}
           disabled={true}
           setDilog={setDilog}

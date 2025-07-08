@@ -115,7 +115,7 @@ cursor: pointer;
 
 
 }
-.shortcut-box:hover .edit,.delete{
+.shortcut-box:hover .edit-cont{
 
   opacity: 1;
   cursor: pointer;
@@ -195,13 +195,18 @@ font-weight: 380;
 font-style: normal;
 
 }
+.edit-cont{
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.edit{
+.edit-cont{
   opacity:0;
 }
-.edit img{
+.edit,.delete{
   width: 18px;
-  filter: invert(1) brightness(1);
   margin-inline: 0.7rem;
 }
 
