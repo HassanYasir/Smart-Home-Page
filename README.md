@@ -1,14 +1,5 @@
 # Modren HomePage
 
-
-<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
-
-
-<br />
-<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view02.png' alt='project-view' width='450'  align='center'/>
-
-
-
 A minimalist and modern homepage built with **React.js**.  
 It offers easy-to-use **shortcuts** and displays **news** related to the user's interests, using the **NewsAPI.org** service.
 
@@ -17,6 +8,7 @@ It offers easy-to-use **shortcuts** and displays **news** related to the user's 
 - Clean and minimalist design
 - Customizable shortcuts to favorite websites
 - Live news feed based on user interests
+- Select theme based on your preference
 - Fully responsive for desktop and laptop
 - Built with React.js for smooth and fast performance
 
@@ -25,6 +17,19 @@ It offers easy-to-use **shortcuts** and displays **news** related to the user's 
 - React.js
 - NewsAPI.org (for fetching news)
 - CSS (for styling)
+## 👀 Project View
+
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
+
+
+<br />
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view02.png' alt='project-view' width='450'  align='center'/>
+<br />
+<img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view03.png' alt='project-view' width='450'  align='center'/>
+
+
+
+
 
 ## 📦 Installation
 
