@@ -11,7 +11,7 @@
 
   --text-white-dull:#CCC;
   --main-color:#0084f7;
-  /* --main-color:#4caf50; */
+  --swiper-theme-color:var(--main-color);
   color-scheme: light dark;
   color:hsl(0, 0%, 87%);
   background-color: var(--bg-dark-1);

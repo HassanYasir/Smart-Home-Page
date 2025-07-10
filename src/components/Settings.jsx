@@ -121,13 +121,8 @@ function Settings({toggleSetting}) {
 
           </div>
         </div>
-        <div className="btn-cont">
-          <button className="dialog-btn-C" onClick={toggleSetting}>
-            Cancel
-          </button>
-          <button className="dialog-btn-S" onClick={toggleSetting}>
-            Save
-          </button>
+        <div className="btn-cont-setting">
+          <div className="close-settings" onClick={toggleSetting}><div className="close-child">&#x2715;</div></div>
         </div>
         
       </div>
