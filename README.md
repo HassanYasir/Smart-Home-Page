@@ -17,6 +17,8 @@ It offers easy-to-use **shortcuts** and displays **news** related to the user's 
 - React.js
 - NewsAPI.org (for fetching news)
 - CSS (for styling)
+- Redux (for state management in React)
+
 ## 👀 Project View
 
 <img src='https://raw.githubusercontent.com/HassanYasir/Smart-Home-Page/refs/heads/main/Readme_content/project_view.png' alt='project-view' width='450'  align='center'/>
@@ -39,7 +41,7 @@ It offers easy-to-use **shortcuts** and displays **news** related to the user's 
 ```
 2. Navigate to the project folder:
 ```bash
-   cd Modren-Home-Page-main
+   cd Smart-Home-Page
 ```
 3. Install dependencies:
 ```bash
