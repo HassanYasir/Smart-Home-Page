@@ -563,7 +563,7 @@ color:var(--text-white-dull);
 }
 
 .nav{
-  width: 53.7vw;
+  width: 53.8vw;
   background-color:var(--bg-dark-2);
   margin-inline: auto;
   display: flex;
@@ -690,10 +690,11 @@ color:var(--text-white-dull);
   
 }
 .news-cont img{
-  width: 60%;
-  aspect-ratio: 2/1.7;
-  margin-inline: 0.7rem;
-  margin-block: auto;
+  width: 52%;
+  aspect-ratio: 4/3;
+  margin-inline: 0.8rem;
+  /* margin-block: auto; */
+  margin-block: 0.8rem;
   border-radius: 4px;
 
 

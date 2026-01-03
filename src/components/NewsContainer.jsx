@@ -14,9 +14,14 @@ function NewsContainer(prop) {
   const pageSize = useSelector((state) => state.pageSize);
 
   useEffect(()=>{
+    
     async function getData(category) {
-
-      let url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${prop.apiKey}&pageSize=${pageSize}`
+      let url;
+      if(!prop.category){
+        url = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${prop.apiKey}&pageSize=${pageSize}`;
+      }else{
+        url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${prop.apiKey}&pageSize=${pageSize}`;
+      }
       try{
         
         Setloading(true);
@@ -90,9 +95,9 @@ function NewsContainer(prop) {
                   loading="lazy"
                 />
                 <div className="content">
-                  <h3>{elem.title.slice(0,43)}...</h3>
+                  <h3>{elem.title.slice(0,52)}...</h3>
                   <p className="new-des">
-                    {elem.description.slice(0,88)}...
+                    {elem.description.slice(0,96)}...
                   </p>
                   <div className="btn-cont">
                   <a href={elem.url} target="_blank"><button className="news-btn">Read more</button></a>
